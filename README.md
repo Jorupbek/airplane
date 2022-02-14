@@ -1,15 +1,31 @@
+## Запуск через Docker
+Чтобы запустить проек с помошью Docker нам необходимо набрать команду
+
+```
+docker-compose up
+```
+либо чтобы она работала на заднем плане
+```
+docker-compose up -d
+```
+чтобы остановить Docker необходимо набрать команду
+```
+ctrl + c
+
+docker-compose down
+```
 ## Установка зависимостей
 
 Перед тем как запустить этот Django проект, нам необходимо установить 
 зависимости, командой:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 ### Запуск миграцтя для БД
 
-```bash
+```
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -18,13 +34,13 @@ python manage.py migrate
 Для для доступа и управления интерфейсом администратора необходимо
 создать суперпользователя командой:
 
-```bash
+```
 python manage.py createsuperuser
 ```
 
 После всех вышеперечисленных манипуляция необходимо запустить наше приложение
 
-```bash
+```
 python manage.py runserver
 ```
 
@@ -37,11 +53,11 @@ python manage.py runserver
   [http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)
   
 curl запрос для получения списка рейсов   
-```bash 
+``` 
 curl -H 'Accept: application/json; indent=4' http://127.0.0.1:8000/api/flights/
 ```
 
-```bash
+```
 [
     {
         "id": 1,
